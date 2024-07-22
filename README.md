@@ -40,10 +40,3 @@ graph TD;
     D --> E[Compute Text Analysis Variables]
     E --> F[Save Results to Output Data Structure.xlsx]
     F --> G[End]
-
-6.## Requirements
-
-	•	Python 3.x
-	•	Beautiful Soup 4
-	•	Pandas
-	•	NLTK
