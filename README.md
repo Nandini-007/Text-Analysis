@@ -1,97 +1,49 @@
-Text Analysis Assignment
+# Text Analysis 
 
-Objective
+## Objective
 
-The objective of this assignment is to extract textual data from articles provided in a given URL and perform text analysis to compute specific variables. The details of the analysis and the variables are explained below.
+The objective of this assignment is to extract textual data from articles given in the URL and perform text analysis to compute specific variables.
 
-Workflow
+## Workflow
 
-	1.	Input Preparation:
-	•	Extract URLs from input.xlsx file.
-	•	For each URL, extract the article text.
-	•	Save each extracted article in a text file with the URL_ID as its file name.
-	•	Ensure only the article title and text are extracted, excluding the website header, footer, and any other non-article content.
-	2.	Text Analysis:
-	•	Perform textual analysis to compute the following variables:
-	•	POSITIVE SCORE
-	•	NEGATIVE SCORE
-	•	POLARITY SCORE
-	•	SUBJECTIVITY SCORE
-	•	AVG SENTENCE LENGTH
-	•	PERCENTAGE OF COMPLEX WORDS
-	•	FOG INDEX
-	•	AVG NUMBER OF WORDS PER SENTENCE
-	•	COMPLEX WORD COUNT
-	•	WORD COUNT
-	•	SYLLABLE PER WORD
-	•	PERSONAL PRONOUNS
-	•	AVG WORD LENGTH
-	3.	Output:
-	•	Save the computed variables in the exact order as given in the Output Data Structure.xlsx file.
+1. **Input:** URLs provided in `input.xlsx` file.
+2. **Extraction:** Extract the article title and article text from each URL. Ensure only the article content is extracted (no headers, footers, or ads).
+3. **Saving:** Save the extracted article in a text file named with the `URL_ID`.
+4. **Analysis:** Compute the following variables for each article:
+   - POSITIVE SCORE
+   - NEGATIVE SCORE
+   - POLARITY SCORE
+   - SUBJECTIVITY SCORE
+   - AVG SENTENCE LENGTH
+   - PERCENTAGE OF COMPLEX WORDS
+   - FOG INDEX
+   - AVG NUMBER OF WORDS PER SENTENCE
+   - COMPLEX WORD COUNT
+   - WORD COUNT
+   - SYLLABLE PER WORD
+   - PERSONAL PRONOUNS
+   - AVG WORD LENGTH
 
-Workflow Chart
-┌─────────────────────┐
-│ 1. Input Preparation│
-└─────────┬───────────┘
-          │
-          ▼
-┌─────────────────────┐
-│Extract URLs from    │
-│input.xlsx           │
-└─────────┬───────────┘
-          │
-          ▼
-┌─────────────────────┐
-│Extract article text │
-│from each URL        │
-└─────────┬───────────┘
-          │
-          ▼
-┌─────────────────────┐
-│Save articles as     │
-│text files with URL_ID│
-└─────────┬───────────┘
-          │
-          ▼
-┌─────────────────────┐
-│ 2. Text Analysis    │
-└─────────┬───────────┘
-          │
-          ▼
-┌─────────────────────┐
-│Compute variables:   │
-│- Positive Score     │
-│- Negative Score     │
-│- Polarity Score     │
-│- Subjectivity Score │
-│- Avg Sentence Length│
-│- % of Complex Words │
-│- Fog Index          │
-│- Avg Words/Sentence │
-│- Complex Word Count │
-│- Word Count         │
-│- Syllables/Word     │
-│- Personal Pronouns  │
-│- Avg Word Length    │
-└─────────┬───────────┘
-          │
-          ▼
-┌─────────────────────┐
-│ 3. Output           │
-│Save variables in    │
-│Output Data Structure│
-│.xlsx file           │
-└─────────────────────┘
-Tools and Libraries
+5. **Output:** Save the computed variables in the specified format as per `Output Data Structure.xlsx`.
 
-	•	Programming Language: Python
-	•	Libraries: BeautifulSoup, Selenium, Scrapy (or any preferred Python libraries for data crawling)
- Output Variables
+## Variables
 
-	•	All input variables from Input.xlsx
-	•	The computed variables listed above
+For detailed definitions and calculations of each variable, refer to `Text Analysis.docx`.
 
-Output Format
+## Workflow Chart
 
-	•	The output should be saved in the format provided in the analyzed_output.xlsx file.
-	•	Save the output in CSV or Excel format.
+```mermaid
+graph TD;
+    A[Start] --> B[Load URLs from input.xlsx]
+    B --> C[Extract Article Title and Text]
+    C --> D[Save Extracted Text as URL_ID.txt]
+    D --> E[Compute Text Analysis Variables]
+    E --> F[Save Results to Output Data Structure.xlsx]
+    F --> G[End]
+
+6.## Requirements
+
+	•	Python 3.x
+	•	Beautiful Soup 4
+	•	Pandas
+	•	NLTK
