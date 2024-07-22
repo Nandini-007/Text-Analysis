@@ -24,7 +24,7 @@ The objective of this assignment is to extract textual data from articles given 
    - PERSONAL PRONOUNS
    - AVG WORD LENGTH
 
-5. **Output:** Save the computed variables in the specified format as per `Output Data Structure.xlsx`.
+5. **Output:** Save the computed variables in the specified format as per `analyzed_output.xlsx`.
 
 ## Variables
 
@@ -38,5 +38,5 @@ graph TD;
     B --> C[Extract Article Title and Text]
     C --> D[Save Extracted Text as URL_ID.txt]
     D --> E[Compute Text Analysis Variables]
-    E --> F[Save Results to Output Data Structure.xlsx]
+    E --> F[Save Results to analyzed_output.xlsx]
     F --> G[End]
